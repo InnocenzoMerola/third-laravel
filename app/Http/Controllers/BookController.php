@@ -119,4 +119,10 @@ class BookController extends Controller
 
         // $request->session()->put('saluto', 'ciao a tutti'); ----> Questo invece resta anche dopo il caricamento
     }
+
+    public function list(){
+        $books = Book::all();
+
+        return response()->json($books);
+    }
 }

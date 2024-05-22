@@ -32,6 +32,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Route::resource('books', BookController::class)->except(['index', 'show']);
 });
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
+Route::get('/books/list', [BookController::class, 'list'])->name('books.list');
 Route::get('/books/{id}', [BookController::class, 'show'])->name('books.show');
 
 // Questo permette di prendere solo, in questo caso, 'index' e 'show'
